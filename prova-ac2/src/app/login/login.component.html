@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <h2>Login</h2>
+    <form #loginForm="ngForm">
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail:</label>
+        <input type="email" [(ngModel)]="email" name="email" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha:</label>
+        <input type="password" [(ngModel)]="senha" name="senha" class="form-control" required />
+      </div>
+      <button class="btn btn-primary" (click)="login()">Entrar</button>
+      <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+    </form>
+</div>  
